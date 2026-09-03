@@ -545,6 +545,14 @@ html { scroll-behavior: smooth; }
     padding-top: 24px;
     border-top: 1px solid var(--border-light);
   }
+  .hero-card {
+    max-width: 100%;
+    margin-left: 0;
+  }
+  .portrait-frame {
+    margin: 0 auto;
+    max-width: 100% !important;
+  }
   .section-spacing {
     padding: 80px 24px;
   }

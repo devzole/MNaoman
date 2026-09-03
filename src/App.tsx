@@ -93,6 +93,42 @@ const PROJECTS = [
     img: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=900&h=680&fit=crop&auto=format",
     imgAlt: "Urban building representing Lahore sanitary services project",
   },
+  {
+    id: "falettis",
+    num: "04",
+    title: "Faletti's Hotel",
+    category: "Mobile App Development · Hospitality",
+    year: "2023",
+    role: "Lead Mobile Developer",
+    services: ["Mobile App Development", "UI/UX Design", "Backend Integration"],
+    desc: "Faletti's Hotel required a premium mobile application that matched their historic luxury brand while delivering modern convenience. The project involved building a seamless digital guest experience platform.",
+    challenge:
+      "Bridging the gap between heritage hospitality and modern digital expectations, ensuring the app felt both luxurious and effortless to use.",
+    approach:
+      "Developed a high-performance native mobile application with a bespoke user interface, integrating seamlessly with existing hospitality systems.",
+    outcome:
+      "A highly-rated mobile experience that streamlined guest services and modernized the brand's digital touchpoints.",
+    img: "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=900&h=680&fit=crop&auto=format",
+    imgAlt: "Luxury hotel interior representing Faletti's Hotel project",
+  },
+  {
+    id: "hospitality-growth",
+    num: "05",
+    title: "Premium Restaurant Group",
+    category: "Digital Growth · Acquisition",
+    year: "2024",
+    role: "Digital Marketing Strategist",
+    services: ["Local SEO", "Performance Marketing", "Brand Positioning"],
+    desc: "A portfolio of high-end restaurants needed to shift from inconsistent foot traffic to predictable, high-value reservations. The strategy centered on capturing local intent and elevating their digital presence.",
+    challenge:
+      "Moving beyond generic social media awareness to drive actual reservations and measurable revenue growth in a saturated market.",
+    approach:
+      "Implemented a hyper-local SEO strategy, targeted performance campaigns for private dining, and streamlined the digital booking journey.",
+    outcome:
+      "A significant increase in direct reservations, stronger local search dominance, and a measurable uplift in private event bookings.",
+    img: "https://images.unsplash.com/photo-1514933651103-005eec06c04b?w=900&h=680&fit=crop&auto=format",
+    imgAlt: "Elegant restaurant dining room",
+  },
 ]
 
 const EXPERIENCE = [
@@ -118,8 +154,8 @@ const EXPERIENCE = [
   },
   {
     year: "Present",
-    title: "Freelance + Devzol",
-    desc: "Working independently with clients across sectors while building Devzol as a focused digital and technology agency.",
+    title: "Freelance + Devzole",
+    desc: "Working independently with clients across sectors while building Devzole as a focused digital and technology agency.",
   },
 ]
 
@@ -233,8 +269,6 @@ function MicroLabel({ children }: { children: string }) {
 export default function App() {
   const [scrolled, setScrolled] = useState(false)
   const [menuOpen, setMenuOpen] = useState(false)
-  const [portraitVariant, setPortraitVariant] =
-    useState<"editorial" | "studio">("editorial")
   const [activeExpertise, setActiveExpertise] = useState<number | null>(null)
   const [formData, setFormData] = useState({
     name: "",
@@ -511,7 +545,7 @@ export default function App() {
                       Agency
                     </span>
                     <a
-                      href="https://devzol.com"
+                      href="https://devzole.com"
                       target="_blank"
                       rel="noreferrer"
                       style={{
@@ -520,7 +554,7 @@ export default function App() {
                         fontWeight: 500,
                       }}
                     >
-                      devzol.com →
+                      devzole.com →
                     </a>
                   </div>
                   <div
@@ -1175,64 +1209,10 @@ export default function App() {
           <div className="two-col-grid" style={{ marginTop: "64px" }}>
             <Reveal>
               <div style={{ position: "sticky", top: "100px" }}>
-                {/* Variant Switcher */}
-                <div
-                  style={{
-                    display: "inline-flex",
-                    gap: "6px",
-                    marginBottom: "16px",
-                    background: "var(--surface)",
-                    padding: "4px",
-                    borderRadius: "4px",
-                    border: "1px solid var(--border-light)",
-                  }}
-                  role="group"
-                  aria-label="Portrait style"
-                >
-                  <button
-                    type="button"
-                    className="portrait-switcher-btn"
-                    onClick={() => setPortraitVariant("editorial")}
-                    style={{
-                      background:
-                        portraitVariant === "editorial"
-                          ? "var(--text)"
-                          : "transparent",
-                      color:
-                        portraitVariant === "editorial"
-                          ? "var(--bg)"
-                          : "var(--text-muted)",
-                    }}
-                  >
-                    Editorial Tailored
-                  </button>
-                  <button
-                    type="button"
-                    className="portrait-switcher-btn"
-                    onClick={() => setPortraitVariant("studio")}
-                    style={{
-                      background:
-                        portraitVariant === "studio"
-                          ? "var(--text)"
-                          : "transparent",
-                      color:
-                        portraitVariant === "studio"
-                          ? "var(--bg)"
-                          : "var(--text-muted)",
-                    }}
-                  >
-                    Studio Classic
-                  </button>
-                </div>
-
                 {/* Portrait Frame */}
                 <div className="portrait-frame" style={{ maxWidth: "480px" }}>
                   <img
-                    src={
-                      portraitVariant === "editorial"
-                        ? photoEditorial
-                        : photoCasual
-                    }
+                    src={photoEditorial}
                     alt="Muhammad Naoman — Digital Marketing Expert and Solution Architect"
                     style={{
                       width: "100%",
@@ -1384,7 +1364,7 @@ export default function App() {
                   }}
                 >
                   Today I work with clients directly as a freelancer, and I'm
-                  building Devzol — a focused digital agency — as an extension
+                  building Devzole — a focused digital agency — as an extension
                   of that practice.
                 </p>
 
@@ -1406,7 +1386,7 @@ export default function App() {
                     Currently based in Pakistan
                   </p>
                   <a
-                    href="https://devzol.com"
+                    href="https://devzole.com"
                     target="_blank"
                     rel="noreferrer"
                     style={{
@@ -1416,7 +1396,7 @@ export default function App() {
                       letterSpacing: "0.04em",
                     }}
                   >
-                    devzol.com →
+                    devzole.com →
                   </a>
                 </div>
               </div>
@@ -1625,7 +1605,7 @@ export default function App() {
         </div>
       </section>
 
-      {/* ── DEVZOL ── */}
+      {/* ── DEVZOLE ── */}
       <section
         className="section-spacing"
         style={{
@@ -1656,7 +1636,7 @@ export default function App() {
                     marginBottom: "24px",
                   }}
                 >
-                  Devzol
+                  Devzole
                 </h2>
                 <p
                   style={{
@@ -1666,13 +1646,13 @@ export default function App() {
                     marginBottom: "32px",
                   }}
                 >
-                  Devzol is a focused digital and technology agency built around
+                  Devzole is a focused digital and technology agency built around
                   the same principles as the individual practice — engineering
                   rigour, marketing intelligence, and a clear focus on business
                   outcomes.
                 </p>
                 <a
-                  href="https://devzol.com"
+                  href="https://devzole.com"
                   target="_blank"
                   rel="noreferrer"
                   className="btn-dark"
@@ -1682,7 +1662,7 @@ export default function App() {
                     color: "var(--white)",
                   }}
                 >
-                  Visit devzol.com →
+                  Visit devzole.com →
                 </a>
               </div>
               <div className="agency-sidebar">
@@ -1693,7 +1673,7 @@ export default function App() {
                     lineHeight: 1.8,
                   }}
                 >
-                  Devzol exists as a service ecosystem — extending the scope of
+                  Devzole exists as a service ecosystem — extending the scope of
                   what a single practitioner can deliver. It is not a rebrand of
                   the personal practice. It is a parallel structure for work
                   that benefits from a team context.
@@ -1742,6 +1722,16 @@ export default function App() {
               quote:
                 "What distinguishes Muhammad Naoman from other digital marketers I've worked with is that he understands the technology side of the equation. He doesn't just ask developers to implement things — he understands what he's asking.",
               attrib: "— Client, Digital Growth Project",
+            },
+            {
+              quote:
+                "The mobile application developed for Faletti's Hotel was nothing short of exceptional. Muhammad Naoman translated our heritage brand into a modern, flawless digital experience that our guests love.",
+              attrib: "— Management, Faletti's Hotel",
+            },
+            {
+              quote:
+                "His approach to digital growth for our restaurant group transformed our reservation numbers. We moved from hoping for walk-ins to having a predictable, data-driven booking pipeline. Truly outstanding service.",
+              attrib: "— Operations Director, Premium Restaurant Group",
             },
           ].map((t, i) => (
             <Reveal key={i} delay={i * 0.08}>
@@ -1855,8 +1845,8 @@ export default function App() {
                 {[
                   {
                     label: "Agency",
-                    value: "devzol.com",
-                    link: "https://devzol.com",
+                    value: "devzole.com",
+                    link: "https://devzole.com",
                   },
                   { label: "Location", value: "Pakistan · Remote Worldwide" },
                   { label: "Response", value: "Within 24 hours" },
@@ -2101,7 +2091,7 @@ export default function App() {
 
             <div className="footer-meta">
               <a
-                href="https://devzol.com"
+                href="https://devzole.com"
                 target="_blank"
                 rel="noreferrer"
                 style={{
@@ -2112,7 +2102,7 @@ export default function App() {
                   marginBottom: "24px",
                 }}
               >
-                Devzol →
+                Devzole →
               </a>
               <p
                 style={{
