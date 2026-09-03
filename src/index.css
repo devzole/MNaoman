@@ -425,6 +425,46 @@ html { scroll-behavior: smooth; }
   padding-bottom: 8px;
 }
 
+.hero-card {
+  background: rgba(236, 234, 227, 0.75);
+  backdrop-filter: blur(12px);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 24px;
+  max-width: 380px;
+  margin-left: auto;
+  box-shadow: 0 16px 36px -12px rgba(26, 25, 23, 0.09);
+  text-align: left;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hero-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 20px 44px -12px rgba(26, 25, 23, 0.13);
+}
+
+.portrait-frame {
+  position: relative;
+  overflow: hidden;
+  border-radius: 4px;
+  box-shadow: 0 24px 50px -15px rgba(26, 25, 23, 0.16);
+  border: 1px solid var(--border);
+  background: var(--surface);
+}
+
+.portrait-switcher-btn {
+  padding: 6px 14px;
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  font-family: 'Inter', sans-serif;
+  transition: all 0.25s ease;
+}
+
 .section-spacing {
   padding: 120px 40px;
 }

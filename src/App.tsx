@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef } from "react"
-import profilePhoto from "@/imports/LinkedInm2.jpeg"
+import photoCasual from "./imports/muhammad-naoman.jpg"
+import photoEditorial from "./imports/muhammad-naoman-editorial.jpg"
 
 /* ─── DATA ──────────────────────────────────────────────────── */
 
@@ -233,6 +234,8 @@ function MicroLabel({ children }: { children: string }) {
 export default function App() {
   const [scrolled, setScrolled] = useState(false)
   const [menuOpen, setMenuOpen] = useState(false)
+  const [portraitVariant, setPortraitVariant] =
+    useState<"editorial" | "studio">("editorial")
   const [activeExpertise, setActiveExpertise] = useState<number | null>(null)
   const [formData, setFormData] = useState({
     name: "",
@@ -417,28 +420,150 @@ export default function App() {
             </div>
 
             <div className="hero-meta">
-              <p
-                style={{
-                  fontSize: "13px",
-                  color: "var(--text-muted)",
-                  lineHeight: 1.8,
-                }}
-              >
-                Freelance · Agency Founder
-                <br />
-                <a
-                  href="https://devzol.com"
-                  target="_blank"
-                  rel="noreferrer"
+              <div className="hero-card">
+                <div
                   style={{
-                    color: "var(--accent)",
-                    textDecoration: "none",
-                    letterSpacing: "0.02em",
+                    display: "flex",
+                    alignItems: "center",
+                    gap: "16px",
+                    marginBottom: "18px",
                   }}
                 >
-                  devzol.com
-                </a>
-              </p>
+                  <img
+                    src={photoEditorial}
+                    alt="Muhammad Naoman"
+                    style={{
+                      width: "60px",
+                      height: "60px",
+                      borderRadius: "50%",
+                      objectFit: "cover",
+                      objectPosition: "top",
+                      border: "2px solid var(--border)",
+                      boxShadow: "0 6px 16px rgba(0,0,0,0.06)",
+                    }}
+                  />
+                  <div>
+                    <h3
+                      className="serif"
+                      style={{ fontSize: "19px", margin: 0, fontWeight: 400 }}
+                    >
+                      Muhammad Naoman
+                    </h3>
+                    <p
+                      style={{
+                        fontSize: "11px",
+                        color: "var(--text-muted)",
+                        margin: "3px 0 0",
+                        letterSpacing: "0.03em",
+                      }}
+                    >
+                      Digital Marketing &amp; Solution Architect
+                    </p>
+                  </div>
+                </div>
+
+                <div
+                  style={{
+                    borderTop: "1px solid var(--border-light)",
+                    paddingTop: "16px",
+                    display: "flex",
+                    flexDirection: "column",
+                    gap: "10px",
+                  }}
+                >
+                  <div
+                    style={{
+                      display: "flex",
+                      justifyContent: "space-between",
+                      fontSize: "12px",
+                    }}
+                  >
+                    <span
+                      style={{
+                        color: "var(--text-light)",
+                        textTransform: "uppercase",
+                        letterSpacing: "0.08em",
+                        fontSize: "10px",
+                      }}
+                    >
+                      Focus
+                    </span>
+                    <span style={{ color: "var(--text)", fontWeight: 500 }}>
+                      Growth Systems &amp; SEO
+                    </span>
+                  </div>
+                  <div
+                    style={{
+                      display: "flex",
+                      justifyContent: "space-between",
+                      fontSize: "12px",
+                    }}
+                  >
+                    <span
+                      style={{
+                        color: "var(--text-light)",
+                        textTransform: "uppercase",
+                        letterSpacing: "0.08em",
+                        fontSize: "10px",
+                      }}
+                    >
+                      Agency
+                    </span>
+                    <a
+                      href="https://devzol.com"
+                      target="_blank"
+                      rel="noreferrer"
+                      style={{
+                        color: "var(--accent)",
+                        textDecoration: "none",
+                        fontWeight: 500,
+                      }}
+                    >
+                      devzol.com →
+                    </a>
+                  </div>
+                  <div
+                    style={{
+                      display: "flex",
+                      justifyContent: "space-between",
+                      fontSize: "12px",
+                      alignItems: "center",
+                    }}
+                  >
+                    <span
+                      style={{
+                        color: "var(--text-light)",
+                        textTransform: "uppercase",
+                        letterSpacing: "0.08em",
+                        fontSize: "10px",
+                      }}
+                    >
+                      Availability
+                    </span>
+                    <span
+                      style={{
+                        display: "flex",
+                        alignItems: "center",
+                        gap: "6px",
+                        fontSize: "11px",
+                        color: "#2E7D32",
+                        fontWeight: 500,
+                      }}
+                    >
+                      <span
+                        style={{
+                          width: "6px",
+                          height: "6px",
+                          borderRadius: "50%",
+                          background: "#2E7D32",
+                          display: "inline-block",
+                        }}
+                      />
+                      Open for Selected Clients
+                    </span>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
 
@@ -1049,25 +1174,137 @@ export default function App() {
           <div className="two-col-grid" style={{ marginTop: "64px" }}>
             <Reveal>
               <div style={{ position: "sticky", top: "100px" }}>
-                <img
-                  src={profilePhoto}
-                  alt="Muhammad Naoman — Digital Marketing Expert and Solution Architect"
+                {/* Variant Switcher */}
+                <div
                   style={{
-                    width: "100%",
-                    maxWidth: "480px",
-                    aspectRatio: "3/4",
-                    objectFit: "cover",
-                    objectPosition: "top",
-                    display: "block",
-                    filter: "grayscale(15%)",
+                    display: "inline-flex",
+                    gap: "6px",
+                    marginBottom: "16px",
+                    background: "var(--surface)",
+                    padding: "4px",
+                    borderRadius: "4px",
+                    border: "1px solid var(--border-light)",
                   }}
-                  loading="lazy"
-                />
+                  role="group"
+                  aria-label="Portrait style"
+                >
+                  <button
+                    type="button"
+                    className="portrait-switcher-btn"
+                    onClick={() => setPortraitVariant("editorial")}
+                    style={{
+                      background:
+                        portraitVariant === "editorial"
+                          ? "var(--text)"
+                          : "transparent",
+                      color:
+                        portraitVariant === "editorial"
+                          ? "var(--bg)"
+                          : "var(--text-muted)",
+                    }}
+                  >
+                    Editorial Tailored
+                  </button>
+                  <button
+                    type="button"
+                    className="portrait-switcher-btn"
+                    onClick={() => setPortraitVariant("studio")}
+                    style={{
+                      background:
+                        portraitVariant === "studio"
+                          ? "var(--text)"
+                          : "transparent",
+                      color:
+                        portraitVariant === "studio"
+                          ? "var(--bg)"
+                          : "var(--text-muted)",
+                    }}
+                  >
+                    Studio Classic
+                  </button>
+                </div>
+
+                {/* Portrait Frame */}
+                <div className="portrait-frame" style={{ maxWidth: "480px" }}>
+                  <img
+                    src={
+                      portraitVariant === "editorial"
+                        ? photoEditorial
+                        : photoCasual
+                    }
+                    alt="Muhammad Naoman — Digital Marketing Expert and Solution Architect"
+                    style={{
+                      width: "100%",
+                      aspectRatio: "3/4",
+                      objectFit: "cover",
+                      objectPosition: "top center",
+                      display: "block",
+                      transition: "opacity 0.4s ease, transform 0.4s ease",
+                    }}
+                    loading="lazy"
+                  />
+
+                  {/* Luxury Floating Status Badge */}
+                  <div
+                    style={{
+                      position: "absolute",
+                      bottom: "14px",
+                      left: "14px",
+                      right: "14px",
+                      background: "rgba(244, 240, 232, 0.94)",
+                      backdropFilter: "blur(12px)",
+                      padding: "10px 14px",
+                      borderRadius: "3px",
+                      border: "1px solid rgba(213, 208, 199, 0.8)",
+                      display: "flex",
+                      alignItems: "center",
+                      justifyContent: "space-between",
+                      flexWrap: "wrap",
+                      gap: "8px",
+                      boxShadow: "0 4px 12px rgba(0,0,0,0.06)",
+                    }}
+                  >
+                    <span
+                      style={{
+                        fontSize: "11px",
+                        fontWeight: 600,
+                        letterSpacing: "0.04em",
+                        color: "var(--text)",
+                      }}
+                    >
+                      Muhammad Naoman
+                    </span>
+                    <span
+                      style={{
+                        fontSize: "10px",
+                        color: "var(--accent)",
+                        letterSpacing: "0.06em",
+                        textTransform: "uppercase",
+                        display: "flex",
+                        alignItems: "center",
+                        gap: "6px",
+                        fontWeight: 600,
+                      }}
+                    >
+                      <span
+                        style={{
+                          width: "6px",
+                          height: "6px",
+                          borderRadius: "50%",
+                          background: "#2E7D32",
+                          display: "inline-block",
+                        }}
+                      />
+                      Available for Advisory
+                    </span>
+                  </div>
+                </div>
+
                 <p
                   style={{
                     fontSize: "11px",
                     color: "var(--text-light)",
-                    marginTop: "12px",
+                    marginTop: "14px",
                     letterSpacing: "0.05em",
                   }}
                 >
