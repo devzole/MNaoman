@@ -90,13 +90,13 @@ Over the last approximately two years, his professional focus has increasingly c
 
 Hammad primarily works as a freelancer and also operates his own small agency:
 
-DEVZOL
+DEVZOLE
 
 Website:
 
-https://devzol.com/
+https://devzole.com/
 
-Devzol should be presented as his agency/business ecosystem, not as a replacement for his personal identity.
+Devzole should be presented as his agency/business ecosystem, not as a replacement for his personal identity.
 
 The personal brand must remain:
 
@@ -579,9 +579,9 @@ Shifted primary professional focus toward digital marketing, SEO, growth strateg
 
 TODAY
 
-FREELANCE + DEVZOL
+FREELANCE + DEVZOLE
 
-Working independently with clients while building Devzol as a small digital/technology agency.
+Working independently with clients while building Devzole as a small digital/technology agency.
 
 Do not invent exact employment dates if they are not supplied.
 
@@ -645,9 +645,9 @@ No fake Trustpilot-style interface.
 
 ---
 
-# 15. DEVZOL
+# 15. DEVZOLE
 
-Introduce Devzol naturally.
+Introduce Devzole naturally.
 
 Heading:
 
@@ -655,17 +655,17 @@ BEYOND THE PERSONAL BRAND
 
 Subheading:
 
-DEVZOL
+DEVZOLE
 
-Explain that Devzol is Hammad's small agency focused on digital and technology solutions.
+Explain that Devzole is Hammad's small agency focused on digital and technology solutions.
 
 Link to:
 
-https://devzol.com/
+https://devzole.com/
 
-Use Devzol as proof that Hammad also operates within a broader service ecosystem.
+Use Devzole as proof that Hammad also operates within a broader service ecosystem.
 
-Do not make Devzol dominate the personal portfolio.
+Do not make Devzole dominate the personal portfolio.
 
 Hammad remains the primary brand.
 
@@ -782,7 +782,7 @@ Include:
 
 * email placeholder
 * LinkedIn placeholder
-* Devzol
+* Devzole
 * relevant social profiles if later supplied
 
 Do not invent contact information.
@@ -803,7 +803,7 @@ About
 Expertise
 Contact
 
-DEVZOL
+DEVZOLE
 
 © 2026 Hammad Ayodi
 
@@ -918,7 +918,7 @@ Implement:
 * structured data
 * Person schema
 * ProfessionalService schema where appropriate
-* Organization schema for Devzol where appropriate
+* Organization schema for Devzole where appropriate
 * proper heading hierarchy
 * descriptive URLs
 * optimized images
@@ -976,7 +976,7 @@ About
 Testimonials
 WhyHammad
 Process
-Devzol
+Devzole
 Contact
 Footer
 
