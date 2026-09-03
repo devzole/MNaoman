@@ -1848,6 +1848,16 @@ export default function App() {
                     value: "devzole.com",
                     link: "https://devzole.com",
                   },
+                  {
+                    label: "LinkedIn",
+                    value: "Muhammad Naoman",
+                    link: "https://www.linkedin.com/in/muhammad-naoman-mohiuddin-029098164/",
+                  },
+                  {
+                    label: "WhatsApp",
+                    value: "+92-332-6264310",
+                    link: "https://wa.me/923326264310",
+                  },
                   { label: "Location", value: "Pakistan · Remote Worldwide" },
                   { label: "Response", value: "Within 24 hours" },
                 ].map((item) => (
@@ -2099,10 +2109,38 @@ export default function App() {
                   color: "var(--accent)",
                   textDecoration: "none",
                   display: "block",
-                  marginBottom: "24px",
+                  marginBottom: "8px",
                 }}
               >
                 Devzole →
+              </a>
+              <a
+                href="https://www.linkedin.com/in/muhammad-naoman-mohiuddin-029098164/"
+                target="_blank"
+                rel="noreferrer"
+                style={{
+                  fontSize: "13px",
+                  color: "var(--accent)",
+                  textDecoration: "none",
+                  display: "block",
+                  marginBottom: "8px",
+                }}
+              >
+                LinkedIn →
+              </a>
+              <a
+                href="https://wa.me/923326264310"
+                target="_blank"
+                rel="noreferrer"
+                style={{
+                  fontSize: "13px",
+                  color: "var(--accent)",
+                  textDecoration: "none",
+                  display: "block",
+                  marginBottom: "24px",
+                }}
+              >
+                WhatsApp →
               </a>
               <p
                 style={{
