@@ -1,6 +1,5 @@
 import React, { useState, useEffect, useRef } from "react"
-import photoCasual from "./imports/muhammad-naoman.jpg"
-import photoEditorial from "./imports/muhammad-naoman-editorial.jpg"
+import { photoCasual, photoEditorial, profilePhoto } from "./imports/profileImage"
 
 /* ─── DATA ──────────────────────────────────────────────────── */
 
@@ -435,9 +434,11 @@ export default function App() {
                     style={{
                       width: "60px",
                       height: "60px",
+                      minWidth: "60px",
+                      flexShrink: 0,
                       borderRadius: "50%",
                       objectFit: "cover",
-                      objectPosition: "top",
+                      objectPosition: "center 20%",
                       border: "2px solid var(--border)",
                       boxShadow: "0 6px 16px rgba(0,0,0,0.06)",
                     }}
