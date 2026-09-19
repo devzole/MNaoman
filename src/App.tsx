@@ -1,5 +1,9 @@
 import React, { useState, useEffect, useRef } from "react"
-import { photoCasual, photoEditorial, profilePhoto } from "./imports/profileImage"
+import {
+  photoCasual,
+  photoEditorial,
+  profilePhoto,
+} from "./imports/profileImage"
 
 /* ─── DATA ──────────────────────────────────────────────────── */
 
@@ -8,31 +12,36 @@ const NAV = ["Work", "About", "Expertise", "Experience", "Contact"]
 const EXPERTISE = [
   {
     num: "01",
-    title: "Digital Marketing",
-    desc: "SEO, organic growth, paid acquisition, positioning and digital strategy built around measurable outcomes.",
+    title: "Meta Ads & Paid Growth",
+    desc: "Full-funnel Meta advertising across Facebook & Instagram — precision audience targeting, creative testing, CAPI/pixel tracking, and scaling profitable ROAS across KSA and global markets.",
   },
   {
     num: "02",
-    title: "SEO & Search Growth",
-    desc: "Technical SEO, on-page optimization, content strategy, local search and long-term growth systems.",
+    title: "Digital Marketing Strategy",
+    desc: "Multi-channel acquisition, positioning, organic growth systems, and performance marketing built around measurable business revenue.",
   },
   {
     num: "03",
-    title: "Growth Strategy",
-    desc: "Turning traffic, content and digital assets into measurable business opportunities, not just metrics.",
+    title: "SEO & Search Growth",
+    desc: "Technical SEO, on-page optimization, content strategy, local search and long-term organic growth systems.",
   },
   {
     num: "04",
+    title: "Growth Strategy",
+    desc: "Turning traffic, content and digital assets into measurable business opportunities, not just vanity metrics.",
+  },
+  {
+    num: "05",
     title: "Solution Architecture",
     desc: "Connecting technology, business requirements and scalable digital systems that actually hold together.",
   },
   {
-    num: "05",
+    num: "06",
     title: "Web & Product Development",
     desc: "A technical foundation from years of building websites, mobile applications and digital products.",
   },
   {
-    num: "06",
+    num: "07",
     title: "Conversion Strategy",
     desc: "Improving user journeys, landing pages, messaging and conversion opportunities across digital touchpoints.",
   },
@@ -40,8 +49,33 @@ const EXPERTISE = [
 
 const PROJECTS = [
   {
-    id: "fladys",
+    id: "ksa-meta-ads",
     num: "01",
+    title: "Meta Ads Campaigns — Saudi Arabia",
+    category: "Paid Acquisition · Multi-Niche Performance",
+    year: "2024–2025",
+    role: "Lead Performance Marketer & Media Buyer",
+    services: [
+      "Meta Ads (FB & IG)",
+      "Lead Generation",
+      "Creative Testing & Hooks",
+      "Conversions API (CAPI)",
+      "WhatsApp Direct Funnels",
+    ],
+    desc: "Spearheaded multi-niche performance marketing across key Saudi markets (Riyadh, Jeddah, Khobar). Designed and executed full-funnel Meta advertising campaigns tailored to Saudi consumer behavior, bilingual (Arabic/English) creative messaging, and high-ticket customer acquisition across construction & contracting, restaurants & specialty cafes, luxury salons, and premium hospitality.",
+    challenge:
+      "Scaling paid acquisition in Saudi Arabia's competitive ad landscape with rising CPMs, high expectations for visual prestige, and distinct consumer habits where qualified enquiry intent is critical over vanity clicks.",
+    approach:
+      "Engineered tailored campaign funnels for each industry: high-intent lead qualification forms & CRM integration for Construction and Contracting firms; instant WhatsApp Business booking & reservation pipelines for Restaurants, Cafes, and Luxury Salons; and seasonal promotional funnels for Hospitality boutique stays. Implemented Meta Conversions API (CAPI) for precise server-side tracking.",
+    outcome:
+      "Delivered an average 4.2x ROAS across F&B and salon campaigns, reduced cost-per-qualified-lead by 62% for construction contractors, and generated over 1,500+ direct bookings across Riyadh and Jeddah dining and hospitality venues.",
+    img: "https://images.unsplash.com/photo-1586724237569-f3d0c1dee8c6?w=900&h=680&fit=crop&auto=format",
+    imgAlt:
+      "Modern architecture and business landscape representing Saudi Arabia Meta Ads campaigns",
+  },
+  {
+    id: "fladys",
+    num: "02",
     title: "Fladys",
     category: "Digital Growth · Strategy",
     year: "2023",
@@ -59,7 +93,7 @@ const PROJECTS = [
   },
   {
     id: "roofing",
-    num: "02",
+    num: "03",
     title: "Roofing Services",
     category: "Local SEO · Lead Generation",
     year: "2024",
@@ -77,7 +111,7 @@ const PROJECTS = [
   },
   {
     id: "sanitary",
-    num: "03",
+    num: "04",
     title: "Sanitary Services — Lahore",
     category: "Local SEO · Digital Presence",
     year: "2024",
@@ -95,7 +129,7 @@ const PROJECTS = [
   },
   {
     id: "falettis",
-    num: "04",
+    num: "05",
     title: "Faletti's Hotel",
     category: "Mobile App Development · Hospitality",
     year: "2023",
@@ -113,7 +147,7 @@ const PROJECTS = [
   },
   {
     id: "hospitality-growth",
-    num: "05",
+    num: "06",
     title: "Premium Restaurant Group",
     category: "Digital Growth · Acquisition",
     year: "2024",
@@ -151,6 +185,11 @@ const EXPERIENCE = [
     year: "2023–Present",
     title: "Digital Marketing & Growth",
     desc: "Primary professional focus shifted toward digital marketing, SEO, growth strategy and solution architecture — where engineering thinking meets marketing execution.",
+  },
+  {
+    year: "2024–Present",
+    title: "Meta Ads & Performance (KSA & Global)",
+    desc: "Managing high-ROI Meta ad campaigns across Saudi Arabia (Riyadh, Jeddah) and global brands — driving lead generation, foot traffic, and revenue across construction, hospitality, restaurants, cafes, and luxury salons.",
   },
   {
     year: "Present",
@@ -389,7 +428,7 @@ export default function App() {
             className="micro-label reveal-up"
             style={{ animationDelay: "0.1s", marginBottom: "48px" }}
           >
-            Digital Marketing · Solution Architecture
+            Meta Ads · Growth Systems · Solution Architecture
           </p>
 
           <h1
@@ -524,7 +563,7 @@ export default function App() {
                       Focus
                     </span>
                     <span style={{ color: "var(--text)", fontWeight: 500 }}>
-                      Growth Systems &amp; SEO
+                      Meta Ads &amp; Growth Systems
                     </span>
                   </div>
                   <div
@@ -640,17 +679,8 @@ export default function App() {
       <div className="divider" />
 
       {/* ── MANIFESTO ── */}
-      <section style={{ padding: "120px 40px" }}>
-        <div
-          style={{
-            maxWidth: "1280px",
-            margin: "0 auto",
-            display: "grid",
-            gridTemplateColumns: "1fr 1fr",
-            gap: "80px",
-            alignItems: "start",
-          }}
-        >
+      <section className="section-spacing">
+        <div className="section-wrap manifesto-grid">
           <Reveal>
             <blockquote style={{ margin: 0 }}>
               <p
@@ -1000,7 +1030,7 @@ export default function App() {
                     textTransform: "uppercase",
                   }}
                 >
-                  04
+                  07
                 </span>
                 <span
                   style={{
@@ -1071,7 +1101,7 @@ export default function App() {
                     textTransform: "uppercase",
                   }}
                 >
-                  05
+                  08
                 </span>
                 <span
                   style={{
@@ -1208,7 +1238,7 @@ export default function App() {
 
           <div className="two-col-grid" style={{ marginTop: "64px" }}>
             <Reveal>
-              <div style={{ position: "sticky", top: "100px" }}>
+              <div className="about-portrait-col">
                 {/* Portrait Frame */}
                 <div className="portrait-frame" style={{ maxWidth: "480px" }}>
                   <img
@@ -1429,13 +1459,7 @@ export default function App() {
             </div>
           </Reveal>
 
-          <div
-            style={{
-              display: "grid",
-              gridTemplateColumns: "repeat(auto-fit, minmax(260px, 1fr))",
-              gap: "0",
-            }}
-          >
+          <div className="why-grid">
             {WHY.map((w, i) => (
               <Reveal key={w.num} delay={i * 0.08}>
                 <div
@@ -1646,10 +1670,10 @@ export default function App() {
                     marginBottom: "32px",
                   }}
                 >
-                  Devzole is a focused digital and technology agency built around
-                  the same principles as the individual practice — engineering
-                  rigour, marketing intelligence, and a clear focus on business
-                  outcomes.
+                  Devzole is a focused digital and technology agency built
+                  around the same principles as the individual practice —
+                  engineering rigour, marketing intelligence, and a clear focus
+                  on business outcomes.
                 </p>
                 <a
                   href="https://devzole.com"
@@ -1681,88 +1705,6 @@ export default function App() {
               </div>
             </div>
           </Reveal>
-        </div>
-      </section>
-
-      <div className="divider" />
-
-      {/* ── TESTIMONIALS ── */}
-      <section
-        className="section-spacing"
-        style={{ background: "var(--bg-warm)" }}
-      >
-        <div className="section-wrap">
-          <Reveal>
-            <div className="perspectives-header-grid">
-              <h2
-                className="serif"
-                style={{
-                  fontSize: "clamp(2rem, 4vw, 3.5rem)",
-                  fontWeight: 400,
-                }}
-              >
-                Client Perspectives
-              </h2>
-              <MicroLabel>Feedback</MicroLabel>
-            </div>
-          </Reveal>
-
-          {[
-            {
-              quote:
-                "Working with Muhammad Naoman brought a rare combination of technical understanding and marketing thinking to the project. He could see both what we needed to build and why it needed to work differently from a growth perspective.",
-              attrib: "— Client, Roofing Services Sector",
-            },
-            {
-              quote:
-                "The work Muhammad Naoman did on our local search presence made a measurable difference to how customers find us. He approached the problem systematically rather than just running campaigns.",
-              attrib: "— Client, Local Services — Lahore",
-            },
-            {
-              quote:
-                "What distinguishes Muhammad Naoman from other digital marketers I've worked with is that he understands the technology side of the equation. He doesn't just ask developers to implement things — he understands what he's asking.",
-              attrib: "— Client, Digital Growth Project",
-            },
-            {
-              quote:
-                "The mobile application developed for Faletti's Hotel was nothing short of exceptional. Muhammad Naoman translated our heritage brand into a modern, flawless digital experience that our guests love.",
-              attrib: "— Management, Faletti's Hotel",
-            },
-            {
-              quote:
-                "His approach to digital growth for our restaurant group transformed our reservation numbers. We moved from hoping for walk-ins to having a predictable, data-driven booking pipeline. Truly outstanding service.",
-              attrib: "— Operations Director, Premium Restaurant Group",
-            },
-          ].map((t, i) => (
-            <Reveal key={i} delay={i * 0.08}>
-              <div className="testimonial-block">
-                <blockquote style={{ margin: 0 }}>
-                  <p
-                    className="serif"
-                    style={{
-                      fontSize: "clamp(1.1rem, 2vw, 1.4rem)",
-                      fontWeight: 400,
-                      lineHeight: 1.6,
-                      color: "var(--text)",
-                      marginBottom: "24px",
-                      fontStyle: "italic",
-                    }}
-                  >
-                    "{t.quote}"
-                  </p>
-                  <footer
-                    style={{
-                      fontSize: "12px",
-                      color: "var(--text-muted)",
-                      letterSpacing: "0.06em",
-                    }}
-                  >
-                    {t.attrib}
-                  </footer>
-                </blockquote>
-              </div>
-            </Reveal>
-          ))}
         </div>
       </section>
 
@@ -2011,6 +1953,9 @@ export default function App() {
                         style={{ cursor: "pointer" }}
                       >
                         <option value="">Select one</option>
+                        <option>
+                          Meta Ads & Paid Acquisition (KSA & Global)
+                        </option>
                         <option>Digital Marketing Strategy</option>
                         <option>SEO & Search Growth</option>
                         <option>Paid Acquisition</option>
@@ -2180,7 +2125,7 @@ export default function App() {
           viewBox="0 0 24 24"
           fill="currentColor"
         >
-          <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 0 0-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/>
+          <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 0 0-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z" />
         </svg>
       </a>
     </div>
